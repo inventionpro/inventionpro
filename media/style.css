@@ -26,10 +26,6 @@ a {
   margin-bottom: 10px;
 }
 
-.bio {
-  max-width: 30vw;
-}
-
 .socials {
   display: flex;
   gap: 14px;
