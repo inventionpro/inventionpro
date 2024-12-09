@@ -4,6 +4,7 @@ See more at my [little website](https://inv.fsh.plus)
 
 ## Currently working on
  * [Fsh](https://fsh.plus) ([org](https://github.com/fsh-org))
+ * [Sakana](https://github.com/Sakana-org/Sakana)
  * and silly side projects
 
 ## Stats
