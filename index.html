@@ -21,16 +21,34 @@
         <p>Aro cat dev</p>
       </span>
     </div>
-    <p class="bio">I'm a self-taught Backend and Frontend developer.<br>I make silly projects to help people!</p>
-    <h2>Currently working on</h2>
+    <p class="bio" id="tb">I'm a self-taught Backend and Frontend developer.<br>I make silly projects to help people!</p>
+    <h2 id="tcw">Currently working on</h2>
     <ul>
       <li><a href="https://fsh.plus">Fsh</a> <a href="https://github.com/fsh-org">(org)</a></li>
       <li><a href="https://github.com/Sakana-org/Sakana">Sakana</a></li>
-      <li>and silly side projects</li>
+      <li id="tas">and silly side projects</li>
+    </ul>
+    <h2 id="tt">Translations</h2>
+    <p id="ttt">I am a spanish translator of multiple projects:</p>
+    <ul>
+      <li>Scratch / ScratchJr</li>
+      <li>Penguinmod</li>
     </ul>
     <div class="socials">
       <a href="https://github.com/inventionpro"><img src="media/github.png" height="40" alt="Github logo, find my github account here" style="border-radius:5rem"></a>
       <a href="https://discord.com/users/816691475844694047"><img src="media/discord.png" height="30" alt="Discord logo, find my discord account here"></a>
     </div>
+    <script>
+      // Helper
+      function $(id) {return document.getElementById(id)};
+      // Translate
+      if (navigator.language === 'es') {
+        $('tb').innerHTML = `Soy un desarollador de Backend y Frontend de aprendizaje propio.<br>¡Creo proyectos disparatados para ayudar a la gente!`;
+        $('tcw').innerHTML = `Actualmente trabajando en`;
+        $('tas').innerHTML = `y proyectos secundarios divertidos`;
+        $('tt').innerHTML = `Traducciones`;
+        $('ttt').innerHTML = `Traduzco a español varios proyectos:`;
+      }
+    </script>
   </body>
 </html>
