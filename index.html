@@ -16,7 +16,7 @@
   <body>
     <side>
       <div class="me">
-        <img src="/media/inv.webp" width="93" height="70">
+        <img src="/media/inv.webp" width="70" height="70">
         <span>
           <h1>Inventionpro</h1>
           <p>Aro cat dev</p>
@@ -24,15 +24,16 @@
       </div>
       <p class="bio" id="tb">I'm a self-taught Backend and Frontend developer. I make silly projects to help people!</p>
       <div class="socials">
-        <a href="https://github.com/inventionpro"><img src="media/github.png" height="40" alt="Github logo, find my github account here" style="border-radius:5rem"></a>
-        <a href="https://discord.com/users/816691475844694047"><img src="media/discord.png" height="30" alt="Discord logo, find my discord account here"></a>
+        <a href="https://github.com/inventionpro" target="_blank"><img src="media/github.png" height="40" alt="Github logo, find my github account here" style="border-radius:5rem"></a>
+        <a href="https://discord.com/users/816691475844694047" target="_blank"><img src="media/discord.png" height="30" alt="Discord logo, find my discord account here"></a>
       </div>
+      <label class="k">Pink? <input type="checkbox" id="k"></label>
     </side>
     <main>
       <h2 id="tcw">Currently working on</h2>
       <ul>
-        <li><a href="https://fsh.plus">Fsh</a> <a href="https://github.com/fsh-org">(org)</a></li>
-        <li><a href="https://github.com/Sakana-org/Sakana">Sakana</a></li>
+        <li><a href="https://fsh.plus" target="_blank">Fsh</a> <a href="https://github.com/fsh-org" target="_blank">(org)</a></li>
+        <li><a href="https://github.com/Sakana-org/Sakana" target="_blank">Sakana</a></li>
         <li id="tas">and silly side projects</li>
       </ul>
       <h2 id="tt">Translations</h2>
@@ -45,6 +46,7 @@
     <script>
       // Helper
       function $(id) {return document.getElementById(id)};
+
       // Translate
       if (navigator.language === 'es') {
         $('tb').innerHTML = `Soy un desarollador de Backend y Frontend de aprendizaje propio.<br>¡Creo proyectos divertidos para ayudar a la gente!`;
@@ -53,6 +55,34 @@
         $('tt').innerHTML = `Traducciones`;
         $('ttt').innerHTML = `Traduzco a español varios proyectos:`;
       }
+
+      // Old website style (a bit? not much, but pink!)
+      let k = document.getElementById('k');
+      function setk(t) {
+        let b = document.body;
+        b.style.setProperty('--text', t?'#fff':'');
+        b.style.setProperty('--bg', t?'oklch(0.72 0.11 335.05)':'');
+        b.style.setProperty('--bg-2', t?'oklch(0.7 0.13 335.37)':'');
+        b.style.setProperty('--link', t?'oklch(0.58 0.24 337.53)':'');
+        b.style.setProperty('--extra-margin', t?'60px':'');
+        let m = document.querySelector('.me');
+        m.style.width = t?'calc(100% + 10px)':'';
+        m.style.marginLeft = t?'-5px':'';
+        m.style.marginTop = t?'-5px':'';
+        m.style.background = t?'linear-gradient(135deg, color-mix(in lab, var(--bg-2) 10%, #fff 10%) 0%, color-mix(in lab, var(--bg-2) 10%, #000 10%) 100%)':'';
+        document.querySelector('side').style.border = t?'5px color-mix(in lab, var(--bg-2) 10%, #000 10%) solid':'';
+
+        let hasoneko = (typeof oneko !== 'undefined');
+        if (t&&!hasoneko) {
+          fetch('/media/oneko.js').then(res=>res.text()).then(res=>eval(res));
+        } else if (t&&hasoneko) {
+          oneko.style.display = '';
+        } else if (!t&&hasoneko) {
+          oneko.style.display = 'none';
+        }
+      }
+      setk(k.checked);
+      k.onchange = ()=>{setk(k.checked)};
     </script>
   </body>
 </html>

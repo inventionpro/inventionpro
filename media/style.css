@@ -5,6 +5,7 @@
   --bg-2: #242424;
 
   --link: #99f;
+  --extra-margin: 0px;
 }
 
 /* Font */
@@ -20,27 +21,32 @@ body {
   color: var(--text);
   font-family: "Lexend", Arial, sans-serif;
   margin: 0px;
+  margin-inline: var(--extra-margin);
   padding: 0px;
-  background-color: var(--bg);
+  background-color: #423;
   overflow: hidden;
 }
 
 side {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
+  top: var(--extra-margin);
+  bottom: var(--extra-margin);
+  left: var(--extra-margin);
   display: block;
   width: 320px;
-  height: 100vh;
   padding: 5px;
   background: var(--bg-2);
   box-sizing: border-box;
 }
 main {
-  height: 100vh;
-  margin-left: 320px;
-  padding: 5px;
+  position: absolute;
+  top: var(--extra-margin);
+  bottom: var(--extra-margin);
+  right: var(--extra-margin);
+  width: calc(100vw - 320px - var(--extra-margin) * 2);
+  padding: 0px 10px;
+  background: var(--bg);
+  box-sizing: border-box;
 }
 
 h1 {
@@ -62,6 +68,12 @@ a {
   align-items: center;
   margin-bottom: 10px;
 }
+.me img {
+  width: 70px;
+  object-fit: cover;
+  overflow-clip-margin: unset;
+  overflow: visible;
+}
 
 .bio {
   text-align: center;
@@ -74,4 +86,11 @@ a {
   justify-content: center;
   width: 100%;
   margin-top: 20px;
+}
+
+.k {
+  position: absolute;
+  width: calc(100% - 10px);
+  text-align: center;
+  bottom: 10px;
 }
