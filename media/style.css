@@ -1,26 +1,60 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+/* Colors */
+:root {
+  --text: #ddd;
+  --bg: #141414;
+  --bg-2: #242424;
+
+  --link: #99f;
+}
+
+/* Font */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fsh.plus/media/Lexend.ttf) format('ttf');
+}
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ddd;
+  color: var(--text);
   font-family: "Lexend", Arial, sans-serif;
-  background-color: #141414;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bg);
+  overflow: hidden;
+}
+
+side {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 320px;
+  height: 100vh;
+  padding: 5px;
+  background: var(--bg-2);
+  box-sizing: border-box;
+}
+main {
+  height: 100vh;
+  margin-left: 320px;
+  padding: 5px;
 }
 
 h1 {
   margin: 0px;
 }
 h2 {
-  margin-bottom: 0px;
+  margin: 10px 0px 0px;
 }
 ul, p {
   margin: 0px;
 }
 
 a {
-  color: #99f;
+  color: var(--link);
 }
 
 .me {
@@ -29,9 +63,15 @@ a {
   margin-bottom: 10px;
 }
 
+.bio {
+  text-align: center;
+}
+
 .socials {
   display: flex;
   gap: 14px;
   align-items: center;
-  margin-top: 2em;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
 }
