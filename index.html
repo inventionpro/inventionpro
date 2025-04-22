@@ -19,7 +19,8 @@
         <img src="/media/inv.webp" width="70" height="70">
         <span>
           <h1>Inventionpro</h1>
-          <p>Aro cat dev</p>
+          <p id="catch-n">Aro cat dev</p>
+          <marquee id="catch-q" style="display:none">Aro cat dev</marquee>
         </span>
       </div>
       <p class="bio" id="tb">I'm a self-taught Backend and Frontend developer. I make silly projects to help people!</p>
@@ -70,7 +71,15 @@
         m.style.marginLeft = t?'-5px':'';
         m.style.marginTop = t?'-5px':'';
         m.style.background = t?'linear-gradient(135deg, color-mix(in lab, var(--bg-2) 10%, #fff 10%) 0%, color-mix(in lab, var(--bg-2) 10%, #000 10%) 100%)':'';
-        document.querySelector('side').style.border = t?'5px color-mix(in lab, var(--bg-2) 10%, #000 10%) solid':'';
+        let sid = document.querySelector('side');
+        if (t) {
+          sid.classList.add('border-pretty');
+        } else {
+          sid.classList.remove('border-pretty');
+        }
+
+        document.getElementById('catch-n').style.display = t?'none':'';
+        document.getElementById('catch-q').style.display = t?'':'none';
 
         let hasoneko = (typeof oneko !== 'undefined');
         if (t&&!hasoneko) {

@@ -94,3 +94,13 @@ a {
   text-align: center;
   bottom: 10px;
 }
+
+.border-pretty {
+  border: 5px pink solid;
+  border-image-source: url(/media/border.png);
+  border-image-slice: 50;
+  border-image-width: 10px;
+  border-image-repeat: round;
+  border-image-outset: 1;
+  z-index: 1;
+}
