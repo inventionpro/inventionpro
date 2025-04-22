@@ -104,3 +104,28 @@ a {
   border-image-outset: 1;
   z-index: 1;
 }
+
+.marquee-wrapper {
+  width: 100%;
+  height: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.marquee {
+  display: inline-block;
+  width: fit-content;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  white-space: nowrap;
+  animation: scroll-left 6s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    left: 140%;
+  }
+  100% {
+    left: -40%;
+  }
+}
