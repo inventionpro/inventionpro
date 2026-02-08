@@ -13,5 +13,5 @@ I am a spanish translator of multiple projects:
  * Penguinmod
 
 ## Stats
-![General stats](https://github-readme-stats.vercel.app/api?username=inventionpro&theme=tokyonight&hide=prs,issues&show_icons=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=inventionpro&theme=tokyonight&layout=compact)
+![General stats](https://github-vercel-deployment-psi.vercel.app/api?username=inventionpro&theme=tokyonight&hide=prs,issues&show_icons=true)
+![Top Langs](https://github-vercel-deployment-psi.vercel.app/api/top-langs/?username=inventionpro&theme=tokyonight&layout=compact)
