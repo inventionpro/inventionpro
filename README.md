@@ -9,8 +9,9 @@ See more at my [little website](https://inv.fsh.plus)
 
 ## Translations
 I am a spanish translator of multiple projects:
- * Scratch (and ScratchJr)
- * Penguinmod
+ * [Scratch](https://scratch.mit.edu) (and ScratchJr)
+ * [Penguinmod](https://penguinmod.com)
+ * [Nontrinsic](https://nontrinsic.linerly.xyz)
 
 ## Stats
 ![General stats](https://github-vercel-deployment-psi.vercel.app/api?username=inventionpro&theme=tokyonight&hide=prs,issues&show_icons=true)
