@@ -33,7 +33,7 @@ side {
   bottom: var(--extra-margin);
   left: var(--extra-margin);
   display: block;
-  width: 320px;
+  width: min(320px, 40dvw);
   padding: 5px;
   background: var(--bg-2);
   box-sizing: border-box;
@@ -43,7 +43,7 @@ main {
   top: var(--extra-margin);
   bottom: var(--extra-margin);
   right: var(--extra-margin);
-  width: calc(100vw - 320px - var(--extra-margin) * 2);
+  width: calc(100vw -  min(320px, 40dvw) - var(--extra-margin) * 2);
   padding: 0px 10px;
   background: var(--bg);
   box-sizing: border-box;
