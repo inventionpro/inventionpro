@@ -4,6 +4,7 @@ See more at my [little website](https://inv.fsh.plus)
 
 ## Currently working on
  * [Fsh](https://fsh.plus) ([org](https://github.com/fsh-org))
+ * [S4D](https://github.com/inventionpro/Scratch-for-Discord)
  * [WXV](https://github.com/inventionpro/Webx-viewer) and the [WebX Spec](https://github.com/webx-plus/WebX-Specification)
  * and silly side projects
 
