@@ -14,7 +14,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(https://fsh.plus/media/Lexend.ttf) format('ttf');
+  src: url(https://fsh.plus/media/Lexend.ttf) format('truetype');
 }
 
 body {
@@ -33,7 +33,7 @@ side {
   bottom: var(--extra-margin);
   left: var(--extra-margin);
   display: block;
-  width: min(320px, 40dvw);
+  width: 320px;
   padding: 5px;
   background: var(--bg-2);
   box-sizing: border-box;
@@ -43,13 +43,13 @@ main {
   top: var(--extra-margin);
   bottom: var(--extra-margin);
   right: var(--extra-margin);
-  width: calc(100vw -  min(320px, 40dvw) - var(--extra-margin) * 2);
+  width: calc(100vw -  320px - var(--extra-margin) * 2);
   padding: 0px 10px;
   background: var(--bg);
   box-sizing: border-box;
 }
 
-h1 {
+h1, h3 {
   margin: 0px;
 }
 h2 {
@@ -127,5 +127,24 @@ a {
   }
   100% {
     left: -40%;
+  }
+}
+
+@media (max-width: 700px) {
+  side {
+    bottom: unset;
+    right: var(--extra-margin);
+    width: unset;
+    height: 200px;
+  }
+  main {
+    top: unset;
+    left: var(--extra-margin);
+    width: unset;
+    height: calc(100dvh - 200px - var(--extra-margin) * 2);
+  }
+  .k {
+    right: 10px;
+    width: unset;
   }
 }
