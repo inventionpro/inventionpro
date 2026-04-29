@@ -23,12 +23,21 @@ body {
   font-family: "Lexend", Arial, sans-serif;
   margin: 0px;
   margin-inline: var(--extra-margin);
-  padding: 0px;
+  padding: 10px;
   background-color: var(--page);
 }
 
+button {
+  cursor: pointer;
+  color: var(--text);
+  padding: 5px;
+  border: 2px var(--bg-2) solid;
+  border-radius: 0.5rem;
+  background-color: var(--bg-2);
+}
 code {
-  background-color: var(--bg-0);
+  background-color: var(--page);
+  backdrop-filter: brightness(0.5);
 }
 
 side {
@@ -53,10 +62,10 @@ main {
   box-sizing: border-box;
 }
 
-h1, h3 {
+h1 {
   margin: 0px;
 }
-h2 {
+h2, h3 {
   margin: 10px 0px 0px;
 }
 ul, p {
