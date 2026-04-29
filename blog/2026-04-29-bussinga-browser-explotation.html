@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+    <title>2026-04-29 Bussinga browser explotation</title>
+    <meta property="og:title" content="2026-04-29 Bussinga browser explotation">
+    <meta name="twitter:title" content="2026-04-29 Bussinga browser explotation">
+    <meta name="description" content="Inventionpro's blog.">
+    <meta property="og:description" content="Inventionpro's blog.">
+    <meta name="twitter:description" content="Inventionpro's blog.">
+    <!-- ------- -->
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/media/inv.webp" type="image/webp">
+    <meta property="og:image" content="https://inv.fsh.plus/media/inv.webp">
+    <meta property="og:image:alt" content="Inventionpro's pfp">
+    <meta name="twitter:image" content="https://inv.fsh.plus/media/inv.webp">
+    <meta name="theme-color" content="#a114ff">
+    <!-- ------------------ -->
+    <link rel="stylesheet" href="/media/style.css">
+  </head>
+  <body>
+    <h1>2026-04-29 Bussinga browser explotation</h1>
+    <p>One click, instant browser control exploit for Bussinga.</p>
+    <p>This is an issue first discovered last year but decided to make it a blog. First PoC in Apr 12, 2025</p>
+    <video src="/media/blog/2026-04-29.mp4" muted width="500" alt="Video demonstration of the exploit"></video>
+    <h2>Discovery</h2>
+    <p>As the creator of <a href="https://github.com/inventionpro/webx-viewer" target="_blank">WXV</a>, when I was first making it, I read through the source code of Napture and Bussinga (both messy in their own way, not like WXV is better) to know how everything was implemented.</p>
+    <p>WebX is extremly limited in all ways, while Bussinga implements extra features that allow extra posibilities to help devs make better pages, such as allowing normal CSS and extra Lua functions.</p>
+    <p>One of these "improvements" was how setting the content of elements is handled in Lua, normally .set_content() just sets text since Face (Creator of WebX) was lazy to implement an equivalent of innerHTML, but Bussinga allowed .set_content() to set HTML, not the limited version, full HTML.</p>
+    <p>So I tinkered a bit and made this PoC that can be found <a href="https://github.com/inventionpro/Bussinga-attack" target="_blank">here</a>, the relevant code:</p>
+    <code><pre>get('l').set_content([[
+  <img src="x" onerror="window.top.document.querySelector('body').innerHTML='<p>men kissing</p><style>body{background:white}</style>'">
+]])</pre></code>
+    <h2>Vulnerability explanation</h2>
+    <p>Very common XSS, except for the entire browser.</p>
+    <p>It sets the content of a element to be an image with an invalid src attribute, it fails to load and trggers the onerror.</p>
+    <p>Inside the onerror it accesses the window's parent (the browser), from which it can do anything (Sets the entire browser to a string in the PoC).</p>
+    <p>The code in the browser that allows this in <code>src/lua.js</code>:</p>
+    <code><pre>set_content: (text)=>{
+  c.innerHTML = text
+},
+set_contents: (text)=>{
+  c.innerHTML = text
+}</pre></code>
+    <h2>Current state</h2>
+    <p>Currently still an issue in <a href="https://github.com/codingMASTER398/bussinga" target="_blank">codingMASTER398</a> and <a href="https://github.com/webx-plus/bussinga" target="_blank">WebX+</a> versions.</p>
+    <p>In the case of WXV, it isn't vulnerable by default, if Bussinga Lua is enabled it might be exploitable but the sandbox makes it harder and the web setting prevents any OS attacks.</p>
+    <h2>Further attempts</h2>
+    <p>The css also uses .innerHTML to set the content of the stylesheet, an attempt to exploit it was attempted but no success on that.</p>
+    <p>Additionaly, Bussinga exposes <code>__TAURI__</code> with dangerous permissions, <code>"fs": { "readFile": true }</code>, it could potentially allow a website to read any file. The attempt to do so has failed.</p>
+  </body>
+</html>

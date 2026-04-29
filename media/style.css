@@ -1,6 +1,7 @@
 /* Colors */
 :root {
   --text: #ddd;
+  --page: #141414;
   --bg: #141414;
   --bg-2: #242424;
 
@@ -23,8 +24,11 @@ body {
   margin: 0px;
   margin-inline: var(--extra-margin);
   padding: 0px;
-  background-color: #423;
-  overflow: hidden;
+  background-color: var(--page);
+}
+
+code {
+  background-color: var(--bg-0);
 }
 
 side {
