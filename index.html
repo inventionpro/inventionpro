@@ -108,7 +108,7 @@
     -->
     <script>
       document.getElementById('cat').onclick = ()=>{
-        if (oneko) return;
+        if (typeof oneko !== 'undefined') return;
         fetch('/media/oneko.js')
           .then(res=>res.text())
           .then(res=>eval(res));
