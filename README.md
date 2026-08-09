@@ -3,7 +3,7 @@ Aro cat dev.\
 See more in my [little website](https://inv.fsh.plus)
 
 ## Programming
-Backend: High throughput APIs and game engines.\
+Backend: High throughput APIs, and Game engines.\
 Frontend: WebApps (Chat, Paint, Maps, etc...), Static sties (Blogs & Portfolios), and Applications.\
 ^ Desktop and Mobile, with accessibility support (Screen readers, Reduced motion, Keyboard only, etc...).
 
@@ -14,10 +14,12 @@ Frontend: WebApps (Chat, Paint, Maps, etc...), Static sties (Blogs & Portfolios)
  * and silly side projects
 
 ## Translations
-I am an active spanish translator of multiple projects:
- * [Scratch](https://scratch.mit.edu) (and ScratchJr)
- * [Penguinmod](https://penguinmod.com)
- * [Nontrinsic](https://nontrinsic.linerly.xyz)
+Active spanish translator of multiple projects:
+ * Main translator
+   * [Penguinmod](https://penguinmod.com)
+   * [Nontrinsic](https://nontrinsic.linerly.xyz)
+ * Asistant translator
+   * [Scratch](https://scratch.mit.edu) (and ScratchJr)
 
 ## Stats
 ![General stats](https://github-vercel-deployment-psi.vercel.app/api?username=inventionpro&theme=tokyonight&hide=prs,issues&show_icons=true)

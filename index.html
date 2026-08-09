@@ -26,82 +26,93 @@
     <link rel="stylesheet" href="./media/style.css">
     <script src="./media/langs/script.js"></script>
     <style>
-      body { padding: 0px }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100dvw;
+        min-height: 100dvh;
+        padding: 0px;
+      }
+      div[tlang="translations.main"] {
+        display: inline-block;
+        font-size: 0.8em;
+        width: fit-content;
+        padding: 4px;
+        border-radius: 1rem;
+        background-color: var(--bg-2);
+      }
     </style>
   </head>
   <body>
-    <side>
-      <div class="me">
-        <img src="/media/inv.webp" width="70" height="70">
-        <span style="width:100%">
-          <h1>Inventionpro</h1>
-          <p id="catch-n">Aro cat dev</p>
-          <div id="catch-q" class="marquee-wrapper" style="display:none"><div class="marquee">Aro cat dev</div></div>
-        </span>
+    <section>
+      <header>
+        <div class="me">
+          <img src="/media/inv.webp" width="70" height="70" alt="Inventionpro">
+          <div>
+            <h1>Inventionpro</h1>
+            <p>Aro <button id="cat">cat</button> dev</p>
+          </div>
+        </div>
+        <hr>
+        <p class="bio" tlang="bio">Self-taught Backend and Frontend developer. I make silly projects that help people!</p>
+      </header>
+    </section>
+    <section>
+      <div>
+        <h2 tlang="programming">Programming</h2>
+        <strong tlang="backend">Backend:</strong><span tlang="backend.desc"> High throughput APIs and Game engines.</span><br>
+        <strong tlang="frontend">Frontend:</strong><span tlang="frontend.desc"> WebApps (Chat, Paint, Maps, etc...), Static sties (Blogs & Portfolios), and Applications.</span><br>
+        <span tlang="frontend.extra">^ Desktop and Mobile, with accessibility support (Screen readers, Reduced motion, Keyboard only, etc...).</span>
       </div>
-      <p class="bio" tlang="bio">I'm a self-taught Backend and Frontend developer. I make silly projects to help people!</p>
-      <div class="socials">
-        <a href="https://github.com/inventionpro" target="_blank"><img src="media/github.png" height="40" alt="Github logo, find my github account here" style="border-radius:5rem"></a>
-        <a href="https://discord.com/users/816691475844694047" target="_blank"><img src="media/discord.png" height="30" alt="Discord logo, find my discord account here"></a>
+      <div>
+        <h3 tlang="workingon">Currently working on</h3>
+        <ul>
+          <li><a href="https://fsh.plus" target="_blank">Fsh</a> <a href="https://github.com/fsh-org" target="_blank">(org)</a></li>
+          <li><a href="https://github.com/inventionpro/Scratch-for-Discord" target="_blank">S4D</a></li>
+          <li><a href="https://github.com/inventionpro/Webx-viewer" target="_blank">WXV</a> <span tlang="workingon.and">and the</span> <a href="https://github.com/webx-plus/WebX-Specification">WebX Spec</a></li>
+          <li tlang="workingon.other">and silly side projects</li>
+        </ul>
       </div>
-      <label class="k">Pink? <input type="checkbox" id="k"></label>
-    </side>
-    <main>
-      <h2 tlang="programming">Programming</h2>
-      <strong tlang="backend">Backend:</strong><span tlang="backend.desc"> High throughput APIs and game engines.</span><br>
-      <strong tlang="frontend">Frontend:</strong><span tlang="frontend.desc"> WebApps (Chat, Paint, Maps, etc...), Static sties (Blogs & Portfolios), and Applications.</span><br>
-      <span tlang="frontend.extra">^ Desktop and Mobile, with accessibility support (Screen readers, Reduced motion, Keyboard only, etc...).</span>
-      <h3 tlang="workingon">Currently working on</h3>
-      <ul>
-        <li><a href="https://fsh.plus" target="_blank">Fsh</a> <a href="https://github.com/fsh-org" target="_blank">(org)</a></li>
-        <li><a href="https://github.com/inventionpro/Scratch-for-Discord" target="_blank">S4D</a></li>
-        <li><a href="https://github.com/inventionpro/Webx-viewer" target="_blank">WXV</a> <span tlang="workingon.and">and the</span> <a href="https://github.com/webx-plus/WebX-Specification">WebX Spec</a></li>
-        <li tlang="workingon.other">and silly side projects</li>
-      </ul>
-      <h2 tlang="translations">Translations</h2>
-      <p tlang="translations.body">I am an active spanish translator of multiple projects:</p>
-      <ul>
-        <li><a href="https://scratch.mit.edu" target="_blank">Scratch / ScratchJr</a></li>
-        <li><a href="https://penguinmod.com" target="_blank">Penguinmod</a></li>
-        <li><a href="https://nontrinsic.linerly.xyz" target="_blank">Nontrinsic</a></li>
-      </ul>
-      <h2>Blog</h2>
-      <a href="/blog"><button tlang="blog.desc">Go (Untranslated)</button></a>
-    </main>
+    </section>
+    <section>
+      <div>
+        <h2 tlang="translations">Translations</h2>
+        <p tlang="translations.body">I am an active spanish translator of multiple projects:</p>
+        <ul>
+          <li><a href="https://penguinmod.com" target="_blank">Penguinmod</a> <div tlang="translations.main">Main translator</div></li>
+          <li><a href="https://nontrinsic.linerly.xyz" target="_blank">Nontrinsic</a> <div tlang="translations.main">Main translator</div></li>
+          <li><a href="https://scratch.mit.edu" target="_blank">Scratch / ScratchJr</a></li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2 tlang="other">Other</h2>
+        <a href="/blog"><button tlang="other.blog">Blog (English)</button></a>
+      </div>
+    </section>
+    <section>
+      <div>
+        <h2 tlang="socials">Socials</h2>
+        <a href="https://github.com/inventionpro" target="_blank"><img src="media/github.png" height="40" alt="GitHub" style="border-radius:5rem"></a>
+        <a href="https://discord.com/users/816691475844694047" target="_blank"><img src="media/discord.png" height="30" alt="Discord"></a>
+      </div>
+    </section>
+      <!-- Soon
+    <section>
+      <h2 tlang="buttons">Buttons</h2>
+      <a href="https://maxy.top"><img src="https://maxy.top/static/maxybuttonanim.svg" height="40" alt="maxy.top button"></a>
+    </section>
+    -->
     <script>
-      // Old website style (a bit? not much, but pink!)
-      let k = document.getElementById('k');
-      function setk() {
-        let t = k.checked;
-        let b = document.body;
-        b.style.setProperty('--text', t?'#fff':'');
-        b.style.setProperty('--page', t?'#423':'');
-        b.style.setProperty('--bg', t?'oklch(0.72 0.11 335.05)':'');
-        b.style.setProperty('--bg-2', t?'oklch(0.7 0.13 335.37)':'');
-        b.style.setProperty('--link', t?'oklch(0.58 0.24 337.53)':'');
-        b.style.setProperty('--extra-margin', t?'60px':'');
-        let m = document.querySelector('.me');
-        m.style.width = t?'calc(100% + 10px)':'';
-        m.style.marginLeft = t?'-5px':'';
-        m.style.marginTop = t?'-5px':'';
-        m.style.background = t?'linear-gradient(135deg, color-mix(in lab, var(--bg-2) 10%, #fff 10%) 0%, color-mix(in lab, var(--bg-2) 10%, #000 10%) 100%)':'';
-        let sid = document.querySelector('side');
-        sid.classList[t?'add':'remove']('border-pretty');
-
-        document.getElementById('catch-n').style.display = t?'none':'';
-        document.getElementById('catch-q').style.display = t?'':'none';
-
-        let hasoneko = (typeof oneko !== 'undefined');
-        if (t&&!hasoneko) {
-          fetch('/media/oneko.js').then(res=>res.text()).then(res=>eval(res));
-        } else if (t&&hasoneko) {
-          oneko.style.display = '';
-        } else if (!t&&hasoneko) {
-          oneko.style.display = 'none';
-        }
-      }
-      setk();
-      k.onchange = setk;
+      document.getElementById('cat').onclick = ()=>{
+        if (oneko) return;
+        fetch('/media/oneko.js')
+          .then(res=>res.text())
+          .then(res=>eval(res));
+      };
     </script>
   </body>
 </html>

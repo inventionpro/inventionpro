@@ -1,9 +1,11 @@
 {
-  "bio": "I'm a self-taught Backend and Frontend developer. I make silly projects to help people!",
+  "bio": "Self-taught Backend and Frontend developer. I make silly projects that help people!",
+
+  "socials": "Socials",
 
   "programming": "Programming",
   "backend": "Backend:",
-  "backend.desc": " High throughput APIs and game engines.",
+  "backend.desc": " High throughput APIs and Game engines.",
   "frontend": "Frontend:",
   "frontend.desc": " WebApps (Chat, Paint, Maps, etc...), Static Sites (Blogs & Portfolios), and Applications.",
   "frontend.extra": "^ Desktop and Mobile, with accessibility support (Screen readers, Reduced motion, Keyboard only, etc...).",
@@ -12,7 +14,11 @@
   "workingon.other": "and silly side projects",
 
   "translations": "Translations",
-  "translations.body": "I am an active spanish translator of multiple projects:",
+  "translations.body": "Active spanish translator of multiple projects:",
+  "translations.main": "Main translator",
 
-  "blog.desc": "Go (Untranslated)"
+  "other": "Other",
+  "other.blog": "Blog (English)",
+
+  "buttons": "Buttons"
 }

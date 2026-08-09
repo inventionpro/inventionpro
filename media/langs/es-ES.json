@@ -1,9 +1,11 @@
 {
-  "bio": "Soy un desarollador de Backend y Frontend de aprendizaje propio. ¡Creo proyectos divertidos para ayudar a la gente!",
+  "bio": "Sesarollador de Backend y Frontend autodidacta. ¡Creo proyectos divertidos que ayudan a la gente!",
+
+  "socials": "Sociales",
 
   "programming": "Programacion",
   "backend": "Backend:",
-  "backend.desc": " APIs de alto rendimiento y motores de juegos.",
+  "backend.desc": " APIs de alto rendimiento y Motores de juegos.",
   "frontend": "Frontend:",
   "frontend.desc": " Aplicaciones web (Chats, Paint, Mapas, etc...), Sitios Estáticos (Blogs & Portfolios) y Aplicaciones.",
   "frontend.extra": "^ Escritorio y Móvil, con soporte de accesibilidad (Lectores de pantalla, Movimiento reducido, Solo teclado, etc...).",
@@ -12,7 +14,11 @@
   "workingon.other": "y proyectos divertidos secundarios",
 
   "translations": "Traducciones",
-  "translations.body": "Soy un traductor activo al español de varios proyectos:",
+  "translations.body": "Traductor activo al español de varios proyectos:",
+  "translations.main": "Traductor principal",
 
-  "blog.desc": "Ir (Sin traducción)"
+  "other": "Otro",
+  "other.blog": "Blog (Ingles)",
+
+  "buttons": "Buttons"
 }
